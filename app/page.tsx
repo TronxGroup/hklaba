@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 
 // Types
 type Person = {
@@ -58,11 +59,16 @@ export default function HKLABALanding() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900">
+      {/* Scripts externos necesarios (reCAPTCHA) */}
+      <Script src="https://www.google.com/recaptcha/api.js" strategy="lazyOnload" />
+
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/hklaba-logo.png" alt="HKLABA Logo" width={180} height={52} />
+            <a href="/" aria-label="Ir al inicio">
+              <Image src="/hklaba-logo.png" alt="HKLABA Logo" width={180} height={52} />
+            </a>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-600">
             <a href="#quienes" className="hover:text-hklRed">Quiénes somos</a>
@@ -322,28 +328,52 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* CONTACTO */}
+      {/* CONTACTO (Zoho WebToLead con el mismo diseño) */}
       <section id="contacto" className="border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Contacto</h2>
           <p className="mt-2 text-neutral-700 max-w-prose">Cuéntanos tu interés y te contactaremos en 24 horas hábiles.</p>
 
           <div className="mt-8 grid lg:grid-cols-3 gap-6">
-            <form action={ORG.formspree} method="POST" className="lg:col-span-2 rounded-3xl border border-neutral-200 p-6 bg-white">
+            {/* Formulario estilizado, enviando a Zoho CRM */}
+            <form
+              action="https://crm.zoho.com/crm/WebToLeadForm"
+              method="POST"
+              acceptCharset="UTF-8"
+              className="lg:col-span-2 rounded-3xl border border-neutral-200 p-6 bg-white"
+            >
+              {/* Campos ocultos requeridos por Zoho */}
+              <input type="hidden" name="xnQsjsdp" value="9927bc9ab48ac45afe972e2f745d45e4290a74b87b5f46b6410a68bbdd44f1a4" />
+              <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+              <input type="hidden" name="xmIwtLD" value="b78599c20c7b6cd2fe8b4cdac0d88d8aac69f68b62f698b96269b54c2e6a3b8349a3e45819f6fefb1fd0c3f32b5c5dae" />
+              <input type="hidden" name="actionType" value="TGVhZHM=" />
+              <input type="hidden" name="returnURL" value="/gracias" />
+              {/* Origen del lead (picklist en Zoho) */}
+              <input type="hidden" name="LEADCF9" value="hklaba.com/contacto" />
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm text-neutral-600">Nombre</label>
-                  <input name="name" required className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                  <input name="First Name" id="First_Name" required maxLength={40} className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                </div>
+                <div>
+                  <label className="block text-sm text-neutral-600">Apellido</label>
+                  <input name="Last Name" id="Last_Name" required maxLength={80} className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
                 </div>
                 <div>
                   <label className="block text-sm text-neutral-600">Email</label>
-                  <input type="email" name="email" required className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                  <input type="email" name="Email" id="Email" className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
                 </div>
                 <div className="sm:col-span-2">
                   <label className="block text-sm text-neutral-600">Mensaje</label>
-                  <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                  <textarea name="LEADCF3" id="LEADCF3" rows={5} className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                </div>
+                {/* reCAPTCHA v2 */}
+                <div className="sm:col-span-2">
+                  <div className="g-recaptcha" data-sitekey="6LcAPtorAAAAAALHzNfPb8al-jYExQbDcCiK7BK5" data-theme="light" />
                 </div>
               </div>
+
               <button className="mt-4 rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" type="submit">Enviar</button>
             </form>
 
