@@ -25,7 +25,7 @@ export default function HKLABALanding() {
   ];
 
   const activities = ['/IMG_6093.jpg','/IMG-20181217-WA0052.jpg','/IMG-20190110-WA0044.jpg'];
-  const forumPhotos = ['/forum-1.svg','/forum-2.svg','/forum-3.svg'];
+  const forumPhotos = ['/jpg(2).jpg','/jpg(1).jpg','/jpg.jpg'];
 
   // 6 logos de aliados (espacios)
   const supportingLogos = [
