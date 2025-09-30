@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
+import NextDynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 
 // 🔎 SEO específico de la home
