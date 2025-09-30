@@ -373,7 +373,7 @@ export default function HKLABALanding() {
 
           <div className="flex flex-wrap items-center gap-4 text-neutral-600">
             <a href="https://www.linkedin.com/company/hklaba" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">LinkedIn</a>
-            <a href="#condiciones" className="underline decoration-neutral-300 hover:text-hklRed">Condiciones y Privacidad</a>
+            <a href="/condiciones" className="underline decoration-neutral-300 hover:text-hklRed">Condiciones y Privacidad</a>
             <a href="https://www.web.facebook.com/hktdc_latam" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">HKTDC Chile Office (Facebook)</a>
             <a href="https://www.asiapacific-chamber.com" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">APCC</a>
           </div>
