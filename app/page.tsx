@@ -133,7 +133,7 @@ export default function HKLABALanding() {
               La red oficial que conecta a Latinoamérica con Hong Kong
             </h1>
             <p className="mt-4 text-neutral-700 max-w-prose">
-              HKLABA es la única asociación en Latinoamérica miembro de la <span className="font-medium">Federation of Hong Kong Business Associations Worldwide</span>, una red global que articula oportunidades de negocios y vínculos de alto nivel.
+              La Hong Kong – Latin America Business Association (HKLABA) es la única asociación en Latinoamérica miembro de la <span className="font-medium">Federation of Hong Kong Business Associations Worldwide</span>, una red global que articula oportunidades de negocios y vínculos de alto nivel.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={ORG.apccSignupUrl} className="rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" rel="noopener">Unirme vía APCC</a>
@@ -192,7 +192,7 @@ export default function HKLABALanding() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Alianza con HKTDC</h2>
             <p className="mt-4 text-neutral-700">
-              La Hong Kong – Latin America Business Association (HKLABA) y el Hong Kong Trade Development Council (HKTDC) mantienen un acuerdo de cooperación (MOU) para promover comercio e inversiones, intercambio de consultas, apoyo a misiones y actividades empresariales.
+              HKLABA y el Hong Kong Trade Development Council (HKTDC) mantienen un acuerdo de cooperación (MOU) para promover comercio e inversiones, intercambio de consultas, apoyo a misiones y actividades empresariales.
             </p>
             <div className="mt-6 flex gap-3">
               <a href={ORG.apccSignupUrl} className="rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" rel="noopener">Quiero ser miembro</a>
