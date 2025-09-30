@@ -29,12 +29,12 @@ export default function HKLABALanding() {
 
   // 6 logos de aliados (espacios)
   const supportingLogos = [
-    '/supporting_logo_1',
-    '/supporting_logo_2',
-    '/supporting_logo_3',
-    '/supporting_logo_4',
-    '/supporting_logo_5',
-    '/supporting_logo_6',
+    '/supporting_logo_1.png',
+    '/supporting_logo_2.png',
+    '/supporting_logo_3.png',
+    '/supporting_logo_4.png',
+    '/supporting_logo_5.png',
+    '/supporting_logo_6.png',
   ];
 
   // ====== Beneficios (texto APCC / HKLABA / Federation) ======
