@@ -192,7 +192,7 @@ export default function HKLABALanding() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Alianza con HKTDC</h2>
             <p className="mt-4 text-neutral-700">
-              HKLABA y el Hong Kong Trade Development Council (HKTDC) mantienen un acuerdo de cooperación (MOU) para promover comercio e inversiones, intercambio de consultas, apoyo a misiones y actividades empresariales.
+              La Hong Kong – Latin America Business Association (HKLABA) y el Hong Kong Trade Development Council (HKTDC) mantienen un acuerdo de cooperación (MOU) para promover comercio e inversiones, intercambio de consultas, apoyo a misiones y actividades empresariales.
             </p>
             <div className="mt-6 flex gap-3">
               <a href={ORG.apccSignupUrl} className="rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" rel="noopener">Quiero ser miembro</a>
