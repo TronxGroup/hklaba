@@ -24,7 +24,7 @@ export default function HKLABALanding() {
     { k: '11.000+', v: 'Asociados' },
   ];
 
-  const activities = ['/activity-1.svg','/activity-2.svg','/activity-3.svg'];
+  const activities = ['/IMG_6093.jpg','/IMG-20181217-WA0052.jpg','/IMG-20190110-WA0044.jpg'];
   const forumPhotos = ['/forum-1.svg','/forum-2.svg','/forum-3.svg'];
 
   // 6 logos de aliados (espacios)
