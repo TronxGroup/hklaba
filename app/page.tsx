@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+// Types
 type Person = {
   name: string
   role: string
@@ -10,9 +11,9 @@ export default function HKLABALanding() {
   const ORG = {
     name: 'HKLABA — Hong Kong–Latin America Business Association',
     tagline: 'Conectando Hong Kong con América Latina',
-    email: 'contact@hklaba.com',
-    phone: '+56 9 0000 0000',
-    address: 'Santiago, Chile',
+    email: 'info@hklaba.com',
+    phone: '+56 9 7576 9493',
+    address: 'Santiago - Chile',
     apccSignupUrl: 'https://apcc-chamber.vercel.app/',
     formspree: 'https://formspree.io/f/xxxxxxxx'
   };
@@ -25,22 +26,15 @@ export default function HKLABALanding() {
 
   const activities = ['/activity-1.svg','/activity-2.svg','/activity-3.svg'];
   const forumPhotos = ['/forum-1.svg','/forum-2.svg','/forum-3.svg'];
-  const partnerPhotos = ['/partners-1.svg','/partners-2.svg','/partners-3.svg'];
 
-  // ====== Directorio (edita nombres/correos si corresponde) ======
-  const board: Person[] = [
-    { name: 'Nombre Apellido', role: 'Presidente' },
-    { name: 'Nombre Apellido', role: 'Vicepresidente' },
-    { name: 'Nombre Apellido', role: 'Director Ejecutivo' },
-    { name: 'Nombre Apellido', role: 'Secretario General' },
-    { name: 'Nombre Apellido', role: 'Tesorero' },
-  ];
-
-  const directors: Person[] = [
-    { name: 'Nombre Apellido', role: 'Director' },
-    { name: 'Nombre Apellido', role: 'Director' },
-    { name: 'Nombre Apellido', role: 'Consejero' },
-    { name: 'Nombre Apellido', role: 'Consejero' },
+  // 6 logos de aliados (espacios)
+  const supportingLogos = [
+    '/supporting_logo_1',
+    '/supporting_logo_2',
+    '/supporting_logo_3',
+    '/supporting_logo_4',
+    '/supporting_logo_5',
+    '/supporting_logo_6',
   ];
 
   // ====== Beneficios (texto APCC / HKLABA / Federation) ======
@@ -73,8 +67,8 @@ export default function HKLABALanding() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-600">
             <a href="#quienes" className="hover:text-hklRed">Quiénes somos</a>
             <a href="#alianzas" className="hover:text-hklRed">Alianza HKTDC</a>
+            <a href="#porquehk" className="hover:text-hklRed">Por qué Hong Kong</a>
             <a href="#membresias" className="hover:text-hklRed">Membresías</a>
-            <a href="#directorio" className="hover:text-hklRed">Directorio</a>
             <a href="#forum" className="hover:text-hklRed">Hong Kong Forum</a>
             <a href="#galeria" className="hover:text-hklRed">Galería</a>
             <a href="#contacto" className="hover:text-hklRed">Contacto</a>
@@ -134,11 +128,20 @@ export default function HKLABALanding() {
               <li>• Participación prioritaria en foros, misiones y actividades de la Federation</li>
             </ul>
           </div>
-          <div className="rounded-3xl border border-neutral-200 p-6 bg-neutral-50">
+          <div className="rounded-3xl border border-neutral-200 p-6 bg-neutral-50 space-y-4">
             <div className="text-sm text-neutral-600">Relación con la Federation</div>
-            <p className="mt-3 text-neutral-700">
+            <p className="text-neutral-700">
               La Federation reúne a 49 asociaciones en 38 países y regiones, con más de 11.000 asociados individuales. Su objetivo es crear sinergias y un canal de colaboración global en torno a Hong Kong.
             </p>
+            {/* Video pequeño que se reproduce en bucle y vuelve al inicio */}
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/a1OcIDBTHgw?rel=0&modestbranding=1&controls=1&mute=1&autoplay=0&loop=1&playlist=a1OcIDBTHgw`}
+                title="Quiénes Somos – Video"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -156,7 +159,7 @@ export default function HKLABALanding() {
               <a href="#forum" className="rounded-xl border border-hklRed text-hklRed px-5 py-3 font-medium hover:bg-red-50 transition">Conocer el Hong Kong Forum</a>
             </div>
           </div>
-          <div className="rounded-3xl border border-neutral-200 p-6 bg-white">
+          <div className="rounded-3xl border border-neutral-200 p-6 bg-white space-y-4">
             <div className="text-sm text-neutral-600">Puntos clave del MOU (2018)</div>
             <ul className="mt-3 space-y-2 text-sm text-neutral-700">
               <li>• Promoción de relaciones comerciales Hong Kong–Chile/LatAm</li>
@@ -166,7 +169,45 @@ export default function HKLABALanding() {
               <li>• Asistencia a funcionarios e investigadores</li>
               <li>• Cumplimiento de normas anticorrupción/AML/CFT</li>
             </ul>
-            <p className="mt-4 text-xs text-neutral-500">* Resumen no vinculante del acuerdo de cooperación.</p>
+            <p className="text-xs text-neutral-500">* Resumen no vinculante del acuerdo de cooperación.</p>
+            {/* Video pequeño que se reproduce en bucle y vuelve al inicio */}
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/FxZEyGRoQUk?rel=0&modestbranding=1&controls=1&mute=1&autoplay=0&loop=1&playlist=FxZEyGRoQUk`}
+                title="Alianza HKTDC – Video"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* POR QUÉ HONG KONG */}
+      <section id="porquehk" className="border-b border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 py-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Por qué hacer negocios con Hong Kong</h2>
+          <div className="mt-6 grid md:grid-cols-2 gap-6 text-neutral-700">
+            <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
+              <h3 className="font-semibold">1) Crear empresa con facilidad</h3>
+              <p className="mt-2">Trámites rápidos, costos de inicio bajos y un entorno pro‑negocios consistentemente rankeado entre los mejores del mundo para emprender.</p>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
+              <h3 className="font-semibold">2) Centro financiero e IPOs</h3>
+              <p className="mt-2">Mercado líder para listados y levantamiento de capital, con la HKEX (Main Board y GEM) atrayendo emisores globales.</p>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
+              <h3 className="font-semibold">3) Sistema tributario simple y competitivo</h3>
+              <p className="mt-2">Bajos impuestos y base territorial: normalmente solo se gravan utilidades generadas en Hong Kong; ingresos extranjeros suelen no pagar en Hong Kong.</p>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
+              <h3 className="font-semibold">4) Comercio exterior libre</h3>
+              <p className="mt-2">Política de libre comercio sin barreras generales: importaciones y exportaciones operan sin restricciones, cumpliendo regulaciones y despachos aduaneros.</p>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 p-6 bg-white md:col-span-2">
+              <h3 className="font-semibold">5) Integridad y anti‑corrupción</h3>
+              <p className="mt-2">Sólido marco de cumplimiento y una comisión independiente (ICAC) con estrategia integral de prevención, educación y aplicación de la ley que mantiene un terreno de juego parejo para los negocios.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -225,56 +266,6 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* DIRECTORIO Y GOBERNANZA */}
-      <section id="directorio" className="border-b border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Directorio y Gobernanza</h2>
-          <p className="mt-2 text-neutral-700 max-w-prose">
-            Estructura institucional de HKLABA. Si deseas proponer representantes o actualizar cargos, contáctanos.
-          </p>
-
-          <div className="mt-8">
-            <h3 className="text-sm uppercase tracking-widest text-neutral-500">Mesa Directiva</h3>
-            <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {board.map((p, i) => (
-                <div key={i} className="rounded-2xl border border-neutral-200 p-5 bg-white">
-                  <div className="flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-full bg-neutral-200 text-neutral-600 flex items-center justify-center font-semibold">
-                      {p.name.split(' ').map(w => w[0]).slice(0,2).join('')}
-                    </div>
-                    <div>
-                      <div className="font-medium">{p.name}</div>
-                      <div className="text-sm text-neutral-600">{p.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <h3 className="mt-10 text-sm uppercase tracking-widest text-neutral-500">Directores y Consejeros</h3>
-            <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {directors.map((p, i) => (
-                <div key={i} className="rounded-2xl border border-neutral-200 p-5 bg-white">
-                  <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded-full bg-neutral-200 text-neutral-600 flex items-center justify-center font-semibold">
-                      {p.name.split(' ').map(w => w[0]).slice(0,2).join('')}
-                    </div>
-                    <div>
-                      <div className="font-medium">{p.name}</div>
-                      <div className="text-sm text-neutral-600">{p.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 text-sm text-neutral-600">
-              Para postulaciones o actualizaciones del directorio: <a href="#contacto" className="text-hklRed underline decoration-hklRed/30">contáctanos</a>.
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* HONG KONG FORUM */}
       <section id="forum" className="border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10">
@@ -316,15 +307,15 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* ALIANZAS (logos/fotos) */}
+      {/* ALIANZAS (6 logos) */}
       <section className="border-b border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Alianzas</h2>
           <p className="mt-2 text-neutral-700 max-w-prose">Logos o fotografías de eventos con aliados estratégicos.</p>
-          <div className="mt-6 grid md:grid-cols-3 gap-3">
-            {partnerPhotos.map((src, i) => (
-              <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-                <Image src={src} alt={`Partner ${i+1}`} width={1200} height={900} className="h-full w-full object-cover" />
+          <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            {supportingLogos.map((src, i) => (
+              <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 bg-white flex items-center justify-center p-4">
+                <Image src={src} alt={`Logo aliado ${i+1}`} width={300} height={200} className="h-auto w-full object-contain" />
               </div>
             ))}
           </div>
@@ -350,7 +341,7 @@ export default function HKLABALanding() {
                 </div>
                 <div className="sm:col-span-2">
                   <label className="block text-sm text-neutral-600">Mensaje</label>
-                  <textarea name="message" rows={5} required className="mt-1 w-full rounded-XL bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
+                  <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200" />
                 </div>
               </div>
               <button className="mt-4 rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" type="submit">Enviar</button>
@@ -371,13 +362,20 @@ export default function HKLABALanding() {
 
       {/* FOOTER */}
       <footer className="py-10">
-        <div className="mx-auto max-w-7xl px-4 text-sm text-neutral-500">
+        <div className="mx-auto max-w-7xl px-4 text-sm text-neutral-500 space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <Image src="/federation-logo.png" alt="Federation Logo" width={200} height={48} />
               <span className="text-neutral-600">Miembro oficial de la Federation of Hong Kong Business Associations Worldwide</span>
             </div>
             <div>© {new Date().getFullYear()} HKLABA. Todos los derechos reservados.</div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4 text-neutral-600">
+            <a href="https://www.linkedin.com/company/hklaba" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">LinkedIn</a>
+            <a href="#condiciones" className="underline decoration-neutral-300 hover:text-hklRed">Condiciones y Privacidad</a>
+            <a href="https://www.web.facebook.com/hktdc_latam" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">HKTDC Chile Office (Facebook)</a>
+            <a href="https://www.asiapacific-chamber.com" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">APCC</a>
           </div>
         </div>
       </footer>
