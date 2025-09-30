@@ -1,9 +1,10 @@
+// app/page.tsx
 import Image from 'next/image'
 import Script from 'next/script'
 import NextDynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 
-// 🔎 SEO específico de la home
+// 🔎 SEO de la home
 export const metadata: Metadata = {
   title: 'HKLABA — Conectando Hong Kong con América Latina',
   description:
@@ -20,17 +21,18 @@ export const metadata: Metadata = {
     'comercio exterior',
     'networking',
   ],
+  alternates: { canonical: 'https://www.hklaba.com/' },
 }
 
-// Carga SOLO en cliente (evita bloquear el SSG)
-const AllianceVideoClient = dynamic(() => import('../components/AllianceVideoClient'), { ssr: false })
-const ForumClient = dynamic(() => import('../components/ForumClient'), { ssr: false })
-const GalleryClient = dynamic(() => import('../components/GalleryClient'), { ssr: false })
-const ContactZohoClient = dynamic(() => import('../components/ContactZohoClient'), { ssr: false })
-
-// Opcional: fuerza build estático sin revalidación
+// ⚙️ Fuerza SSG y sin revalidación (no colisiona con NextDynamic)
 export const dynamic = 'force-static'
 export const revalidate = false
+
+// ⬇️ Cargas cliente (con rutas correctas desde app/page.tsx)
+const AllianceVideoClient = NextDynamic(() => import('./components/AllianceVideoClient'), { ssr: false })
+const ForumClient        = NextDynamic(() => import('./components/ForumClient'),        { ssr: false })
+const GalleryClient      = NextDynamic(() => import('./components/GalleryClient'),      { ssr: false })
+const ContactZohoClient  = NextDynamic(() => import('./components/ContactZohoClient'),  { ssr: false })
 
 export default function HKLABALanding() {
   const ORG = {
@@ -77,12 +79,12 @@ export default function HKLABALanding() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900">
-      {/* JSON-LD: Organization */}
+      {/* JSON-LD básicos */}
       <Script id="ld-organization" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'HKLABA — Hong Kong–Latin America Business Association',
+          name: ORG.name,
           url: 'https://www.hklaba.com/',
           logo: 'https://www.hklaba.com/hklaba-logo.png',
           sameAs: [
@@ -92,7 +94,7 @@ export default function HKLABALanding() {
           ],
           contactPoint: [{
             '@type': 'ContactPoint',
-            telephone: '+56 9 7576 9493',
+            telephone: ORG.phone,
             contactType: 'customer service',
             areaServed: 'CL',
             availableLanguage: ['es', 'en'],
@@ -157,7 +159,7 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* QUIÉNES SOMOS + video (video se monta en cliente) */}
+      {/* QUIÉNES SOMOS (video cliente simplificado con iframe) */}
       <section id="quienes" className="border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10">
           <div>
@@ -178,12 +180,13 @@ export default function HKLABALanding() {
             <p className="text-neutral-700">
               La Federation reúne a 49 asociaciones en 38 países y regiones, con más de 11.000 asociados individuales. Su objetivo es crear sinergias y un canal de colaboración global en torno a Hong Kong.
             </p>
+            {/* Si prefieres tu componente cliente, deja AllianceVideoClient; si no, mantenemos el iframe */}
             <AllianceVideoClient videoId="a1OcIDBTHgw" title="Quiénes Somos – Video" />
           </div>
         </div>
       </section>
 
-      {/* ALIANZA HKTDC + video (cliente) */}
+      {/* ALIANZA HKTDC */}
       <section id="alianzas" className="border-b border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10 items-start">
           <div>
@@ -219,33 +222,33 @@ export default function HKLABALanding() {
           <div className="mt-6 grid md:grid-cols-2 gap-6 text-neutral-700">
             <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
               <h3 className="font-semibold">1) Crear empresa con facilidad</h3>
-              <p className="mt-2">Trámites rápidos, costos de inicio bajos y un entorno pro-negocios consistentemente rankeado entre los mejores del mundo para emprender.</p>
+              <p className="mt-2">Trámites rápidos, costos de inicio bajos y un entorno pro-negocios.</p>
             </div>
             <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
               <h3 className="font-semibold">2) Centro financiero e IPOs</h3>
-              <p className="mt-2">Mercado líder para listados y levantamiento de capital, con la HKEX (Main Board y GEM) atrayendo emisores globales.</p>
+              <p className="mt-2">Mercado líder para listados y levantamiento de capital (HKEX).</p>
             </div>
             <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
-              <h3 className="font-semibold">3) Sistema tributario simple y competitivo</h3>
-              <p className="mt-2">Bajos impuestos y base territorial: normalmente solo se gravan utilidades generadas en Hong Kong; ingresos extranjeros suelen no pagar en Hong Kong.</p>
+              <h3 className="font-semibold">3) Sistema tributario competitivo</h3>
+              <p className="mt-2">Base territorial: utilidades generadas fuera de HK comúnmente exentas.</p>
             </div>
             <div className="rounded-2xl border border-neutral-200 p-6 bg-white">
               <h3 className="font-semibold">4) Comercio exterior libre</h3>
-              <p className="mt-2">Política de libre comercio sin barreras generales: importaciones y exportaciones operan sin restricciones, cumpliendo regulaciones y despachos aduaneros.</p>
+              <p className="mt-2">Sin barreras generales; despachos ágiles y regulaciones claras.</p>
             </div>
             <div className="rounded-2xl border border-neutral-200 p-6 bg-white md:col-span-2">
               <h3 className="font-semibold">5) Integridad y anti-corrupción</h3>
-              <p className="mt-2">Sólido marco de cumplimiento y una comisión independiente (ICAC) con estrategia integral de prevención, educación y aplicación de la ley que mantiene un terreno de juego parejo para los negocios.</p>
+              <p className="mt-2">ICAC y cumplimiento robusto para un terreno parejo de negocios.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Forum y Galería (cliente) */}
+      {/* Forum y Galería (tus componentes cliente) */}
       <ForumClient />
       <GalleryClient />
 
-      {/* Alianzas (ligero, imágenes lazy) */}
+      {/* Alianzas */}
       <section className="border-b border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Alianzas</h2>
@@ -260,7 +263,7 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* Contacto (Zoho + reCAPTCHA en cliente) */}
+      {/* Contacto (tu componente Zoho cliente) */}
       <ContactZohoClient />
 
       {/* FOOTER */}
