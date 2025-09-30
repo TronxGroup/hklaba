@@ -1,7 +1,7 @@
 export default function CondicionesPrivacidad() {
   return (
-    <div className="min-h-screen bg-white text-neutral-900">
-      <main className="mx-auto max-w-4xl px-4 py-16 prose prose-neutral">
+    <div className="min-h-screen bg-white text-neutral-900 flex flex-col">
+      <main className="flex-1 mx-auto max-w-4xl px-4 py-16 prose prose-neutral">
         <h1>Condiciones de Uso y Política de Privacidad</h1>
         <p>
           Bienvenido a <strong>HKLABA — Hong Kong–Latin America Business Association</strong>.
@@ -49,7 +49,24 @@ export default function CondicionesPrivacidad() {
         <p className="text-sm text-neutral-500 mt-8">
           Última actualización: {new Date().toLocaleDateString('es-CL')}
         </p>
+
+        <div className="mt-8">
+          <a href="/" className="inline-flex rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition">Volver al inicio</a>
+        </div>
       </main>
+
+      <footer className="py-10 border-t border-neutral-200">
+        <div className="mx-auto max-w-7xl px-4 text-sm text-neutral-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="text-neutral-600">© {new Date().getFullYear()} HKLABA. Todos los derechos reservados.</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 text-neutral-600">
+            <a href="https://www.linkedin.com/company/hklaba" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">LinkedIn</a>
+            <a href="https://www.web.facebook.com/hktdc_latam" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">HKTDC Chile Office (Facebook)</a>
+            <a href="https://www.asiapacific-chamber.com" target="_blank" rel="noreferrer" className="underline decoration-neutral-300 hover:text-hklRed">APCC</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
