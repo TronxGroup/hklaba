@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://www.hklaba.com/' },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: '/favicon_hklaba.com',
+    shortcut: '/favicon_hklaba.com',
     apple: '/apple-touch-icon.png',
   },
 }
