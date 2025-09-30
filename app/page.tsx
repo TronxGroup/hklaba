@@ -328,251 +328,240 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* CONTACTO — Zoho WebToLead embebido, manteniendo diseño */}
-      <section id="contacto" className="border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Contacto</h2>
-          <p className="mt-2 text-neutral-700 max-w-prose">Cuéntanos tu interés y te contactaremos en 24 horas hábiles.</p>
+      {/* CONTACTO — Zoho WebToLead con diseño original (2 columnas) */}
+<section id="contacto" className="border-b border-neutral-200">
+  {/* Carga reCAPTCHA (Zoho también la carga, esto asegura disponibilidad en Next) */}
+  <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
 
-          <div className="mt-8 grid lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 rounded-3xl border border-neutral-200 p-6 bg-white">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<!-- Note : - You can modify the font style and form style to suit your website. - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. - The Mandatory check script can modified as to suit your business needs. - It is important that you test the modified form before going live.-->
-<div id = 'crmWebToEntityForm' class = 'zcwf_lblLeft crmWebToEntityForm' style = 'background-color: white;color: black;max-width: 600px;'>
-<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
-<META HTTP-EQUIV = 'content-type' CONTENT = 'text/html;charset=UTF-8'>
-<script src = 'https://www.google.com/recaptcha/api.js' async defer > </script>
-<form id = 'webform6988454000000684005' action = 'https://crm.zoho.com/crm/WebToLeadForm' name = WebToLeads6988454000000684005 method = 'POST' onSubmit = 'javascript:document.charset="UTF-8"; return checkMandatory6988454000000684005()' accept-charset = 'UTF-8'>
-<input type = 'text' style = 'display:none;' name = 'xnQsjsdp' value = 'a60a7215101091d07eeb025d550ce0c4e9369c64fbfb661942d9ef3a583c5453'> </input>
-<input type = 'hidden' name = 'zc_gad' id = 'zc_gad' value = ''> </input>
-<input type = 'text' style = 'display:none;' name = 'xmIwtLD' value = '73d2d9e8cf72df188f36932f8d309c47f409a2af8c8f2ff14198ee3d3e26bfc5be9a67989dcda09602908a4218f09c38'> </input>
-<input type = 'text' style = 'display:none;' name = 'actionType' value = 'TGVhZHM='> </input>
-<input type = 'text' style = 'display:none;' name = 'returnURL' value = 'https&#x3a;&#x2f;&#x2f;www.hklaba.com&#x2f;gracias'> </input>
-<!-- Do not remove this code. -->
-<style>
- html,body{ margin: 0px; }
- .formsubmit.zcwf_button{ color: white !important; background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%); }
- #crmWebToEntityForm.zcwf_lblLeft{ width: 100%; padding: 25px; margin: 0 auto; box-sizing: border-box; }
- #crmWebToEntityForm.zcwf_lblLeft *{ box-sizing: border-box; }
- #crmWebToEntityForm {text-align: left; }
- #crmWebToEntityForm *{ direction: ltr; }
- .zcwf_lblLeft .zcwf_title{ word-wrap: break-word; padding: 0px 6px 10px; font-weight: bold }
- .zcwf_lblLeft.cpT_primaryBtn:hover{ background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important; box-shadow: 0 -2px 0 0 #0159b9 inset !important; border: 0 !important; color: #fff !important; outline: 0 !important; }
- .zcwf_lblLeft .zcwf_col_fld input[ type = text], input[ type = password], .zcwf_lblLeft .zcwf_col_fld textarea{ width: 60%; border: 1px solid #c0c6cc !important; resize: vertical; border-radius: 2px; float: left; }
- .zcwf_lblLeft .zcwf_col_lab{ width: 30%; word-break: break-word; padding: 0px 6px 0px; margin-right: 10px; margin-top: 5px; float: left; min-height: 1px; }
- .zcwf_lblLeft .zcwf_col_fld{ float: left; width: 68%; padding: 0px 6px 0px; position: relative; margin-top: 5px; }
- .zcwf_lblLeft .zcwf_privacy {padding: 6px; }
- .zcwf_lblLeft .wfrm_fld_dpNn {display: none; }
- .dIB {display: inline-block; }
- .zcwf_lblLeft .zcwf_col_fld_slt{ width: 60%; border: 1px solid #ccc; background: #fff; border-radius: 4px; font-size: 12px; float: left; resize: vertical; padding: 2px 5px; }
- .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{ content: ''; display: table; clear: both; }
- .zcwf_lblLeft .zcwf_col_help{ float: left; margin-left: 7px; font-size: 12px; max-width: 35%; word-break: break-word; }
- .zcwf_lblLeft .zcwf_help_icon{ cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #c0c6cc; color: #c1c1c1; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%; }
- .zcwf_lblLeft .zcwf_row {margin: 15px 0px; }
- .zcwf_lblLeft .formsubmit{ margin-right: 5px; cursor: pointer; color: #313949; font-size: 12px; }
- .zcwf_lblLeft .zcwf_privacy_txt{ width: 90%; color: rgb(0, 0, 0); font-size: 12px; font-family: Arial; display: inline-block; vertical-align: top; color: #313949; padding-top: 2px; margin-left: 6px; }
- .zcwf_lblLeft .zcwf_button{ font-size: 12px; color: #313949; border: 1px solid #c0c6cc; padding: 3px 9px; border-radius: 4px; cursor: pointer; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
- .zcwf_lblLeft .zcwf_tooltip_over{ position: relative; }
- .zcwf_lblLeft .zcwf_tooltip_ctn{ position: absolute; background: #dedede; padding: 3px 6px; top: 3px; border-radius: 4px; word-break: break-word; min-width: 100px; max-width: 150px; color: #313949; z-index: 100; }
- .zcwf_lblLeft .zcwf_ckbox{ float: left; }
- .zcwf_lblLeft .zcwf_file{ width: 55%; box-sizing: border-box; float: left; }
- .cBoth:after{ content: ''; display: block; clear: both; }
- @media all and (max-width: 600px){ .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{ width: auto; float: none !important; } .zcwf_lblLeft .zcwf_col_help {width: 40%; } }
-</style>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-  <label for = 'First_Name'>Nombre <span style = 'color:red;'>*</span> </label>
- </div>
- <div class = 'zcwf_col_fld'>
-  <input type = 'text' id = 'First_Name' aria-required = 'true' aria-label = 'First Name' name = 'First Name' aria-valuemax = '40' maxlength = '40'> </input>
-  <div class = 'zcwf_col_help'> </div>
- </div>
-</div>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-  <label for = 'Last_Name'>Apellido <span style = 'color:red;'>*</span> </label>
- </div>
- <div class = 'zcwf_col_fld'>
-  <input type = 'text' id = 'Last_Name' aria-required = 'true' aria-label = 'Last Name' name = 'Last Name' aria-valuemax = '80' maxlength = '80'> </input>
-  <div class = 'zcwf_col_help'> </div>
- </div>
-</div>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-  <label for = 'Email'>Correo electr&oacute;nico</label>
- </div>
- <div class = 'zcwf_col_fld'>
-  <input type = 'text' ftype = 'email' autocomplete = 'false' id = 'Email' aria-required = 'false' aria-label = 'Email' name = 'Email' aria-valuemax = '100' crmlabel = '' maxlength = '100'> </input>
-  <div class = 'zcwf_col_help'> </div>
- </div>
-</div>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-  <label for = 'LEADCF3'>Mensaje</label>
- </div>
- <div class = 'zcwf_col_fld'>
-  <textarea style = 'font-family: Arial, sans-serif;' aria-multiline = 'true' id = 'LEADCF3' aria-required = 'false' aria-label = 'LEADCF3' name = 'LEADCF3'> </textarea>
-  <div class = 'zcwf_col_help'> </div>
- </div>
-</div>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab'> </div>
- <div class = 'zcwf_col_fld'>
-  <div class = 'g-recaptcha' data-sitekey = '6LcAPtorAAAAAALHzNfPb8al-jYExQbDcCiK7BK5' data-theme = 'light' data-callback = 'rccallback6988454000000684005' captcha-verified = 'false' id = 'recap6988454000000684005'> </div>
-  <div id = 'recapErr6988454000000684005' style = 'font-size:12px;color:red;visibility:hidden;'>Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.</div>
- </div>
-</div>
-<div class = 'zcwf_row wfrm_fld_dpNn'>
- <div class = 'zcwf_col_lab' style = 'font-size:12px; font-family: Arial;'>
-  <label for = 'LEADCF9'>Lead_Origen</label>
- </div>
- <div class = 'zcwf_col_fld'>
-  <select class = 'zcwf_col_fld_slt' role = 'combobox' aria-expanded = 'false' aria-haspopup = 'listbox' id = 'LEADCF9' onChange = 'addAriaSelected6988454000000684005()' aria-required = 'false' aria-label = 'LEADCF9' name = 'LEADCF9'>
-   <option value = '-None-'>-None-</option>
-   <option value = 'plan.dekaelomedia.com'>plan.dekaelomedia.com</option>
-   <option value = 'tronxgroup.com&#x2f;contacto'>tronxgroup.com&#x2f;contacto</option>
-   <option value = 'tronxstrategic.com&#x2f;contacto'>tronxstrategic.com&#x2f;contacto</option>
-   <option value = 'dekaelomedia.com&#x2f;contacto'>dekaelomedia.com&#x2f;contacto</option>
-   <option value = 'empresas.echevensko.com'>empresas.echevensko.com</option>
-   <option value = 'apccskills.asiapacific-chamber.com'>apccskills.asiapacific-chamber.com</option>
-   <option value = 'asiapacific-chamber.com&#x2f;contacto'>asiapacific-chamber.com&#x2f;contacto</option>
-   <option selected value = 'hklaba.com&#x2f;contacto'>hklaba.com&#x2f;contacto</option>
-  </select>
-  <div class = 'zcwf_col_help'> </div>
- </div>
-</div>
-<input type = 'text' type = 'hidden' style = 'display: none;' name = 'aG9uZXlwb3Q' value = ''/>
-<div class = 'zcwf_row'>
- <div class = 'zcwf_col_lab'> </div>
- <div class = 'zcwf_col_fld'>
-  <input type = 'submit' id = 'formsubmit' role = 'button' class = 'formsubmit zcwf_button' value = 'Enviar' aria-label = 'Enviar' title = 'Enviar'>
-  <input type = 'reset' class = 'zcwf_button' role = 'button' name = 'reset' value = 'Restablecer' aria-label = 'Restablecer' title = 'Restablecer'>
- </div>
-</div>
-<script>
- function addAriaSelected6988454000000684005 (){
-  var optionElem = event.target;
-  var previousSelectedOption = optionElem.querySelector ( '[aria-selected=true]' );
-  if( previousSelectedOption ){
-    previousSelectedOption.removeAttribute ( 'aria-selected' );
-  }
-  optionElem.querySelectorAll ( 'option' )[ optionElem.selectedIndex ].ariaSelected = 'true';
- }
- /* Do not remove this code. */
- function rccallback6988454000000684005 (){
-  if( document.getElementById( 'recap6988454000000684005' ) != undefined ){
-    document.getElementById ( 'recap6988454000000684005' ).setAttribute ( 'captcha-verified', true );
-  }
-  if( document.getElementById( 'recapErr6988454000000684005' ) != undefined && document.getElementById( 'recapErr6988454000000684005' ).style.visibility == 'visible' ){
-    document.getElementById ( 'recapErr6988454000000684005' ).style.visibility = 'hidden';
-  }
- }
- function reCaptchaAlert6988454000000684005 (){
-  var recap = document.getElementById ( 'recap6988454000000684005' );
-  if( recap != undefined && recap.getAttribute( 'captcha-verified' ) == 'false' ){
-    document.getElementById ( 'recapErr6988454000000684005' ).style.visibility = 'visible';
-    return false;
-  }
-  return true;
- }
- function validateEmail6988454000000684005 (){
-  var form = document.forms[ 'WebToLeads6988454000000684005' ];
-  var emailFld = form.querySelectorAll ( '[ftype=email]' );
-  var i;
-  for( i = 0; i < emailFld.length; i++ ){
-    var emailVal = emailFld[ i ].value;
-    if((emailVal.replace( /^\\s+|\\s+$/g,'' )).length != 0 ){
-      var atpos = emailVal.indexOf ( '@' );
-      var dotpos = emailVal.lastIndexOf ( '.' );
-      if( atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length ){
-        alert ( 'Introduzca una dirección de correo electrónico válida. ' );
-        emailFld[ i ].focus ();
-        return false;
+  {/* Inyecta las funciones de validación de Zoho en window */}
+  <Script id="zoho-webtolead-helpers" strategy="afterInteractive">
+    {`
+      function addAriaSelected6988454000000684005 (){
+        var optionElem = event.target;
+        var previousSelectedOption = optionElem.querySelector('[aria-selected=true]');
+        if (previousSelectedOption){ previousSelectedOption.removeAttribute('aria-selected'); }
+        optionElem.querySelectorAll('option')[ optionElem.selectedIndex ].ariaSelected = 'true';
       }
-    }
-  }
-  return true;
- }
- function checkMandatory6988454000000684005 (){
-  var mndFileds = new Array ( 'First Name', 'Last Name' );
-  var fldLangVal = new Array ( 'Nombre', 'Apellido' );
-  for( i = 0; i < mndFileds.length; i++ ){
-    var fieldObj = document.forms[ 'WebToLeads6988454000000684005' ][ mndFileds[ i ]];
-    if( fieldObj ){
-      if(((fieldObj.value ).replace( /^\\s+|\\s+$/g,'' )).length == 0 ){
-        if( fieldObj.type == 'file' ){
-          alert ( 'Seleccione un archivo para cargar.' );
-          fieldObj.focus ();
-          return false;
-        }
-        alert ( fldLangVal[ i ] + ' no puede estar vacío.' );
-        fieldObj.focus ();
-        return false;
-      } else if( fieldObj.nodeName == 'SELECT' ){
-        if( fieldObj.options[fieldObj.selectedIndex].value == '-None-' ){
-          alert ( fldLangVal[ i ] + ' no puede ser nulo.' );
-          fieldObj.focus ();
-          return false;
-        }
-      } else if( fieldObj.type == 'checkbox' ){
-        if( fieldObj.checked == false ){
-          alert ( 'Please accept ' + fldLangVal[ i ]);
-          fieldObj.focus ();
-          return false;
-        }
+      function rccallback6988454000000684005 (){
+        var recap = document.getElementById('recap6988454000000684005');
+        if(recap){ recap.setAttribute('captcha-verified', true); }
+        var err = document.getElementById('recapErr6988454000000684005');
+        if(err && err.style.visibility === 'visible'){ err.style.visibility = 'hidden'; }
       }
-      try { if( fieldObj.name == 'Last Name' ){ name = fieldObj.value; } } catch ( e ){}
-    }
-  }
-  if( !validateEmail6988454000000684005()){
-    return false;
-  }
-  if( !reCaptchaAlert6988454000000684005()){
-    return false;
-  }
-  var urlparams = new URLSearchParams ( window.location.search );
-  if( urlparams.has( 'service' ) && ( urlparams.get( 'service' ) === 'smarturl' )){
-    var webform = document.getElementById ( 'webform6988454000000684005' );
-    var service = urlparams.get ( 'service' );
-    var smarturlfield = document.createElement ( 'input' );
-    smarturlfield.setAttribute ( 'type', 'hidden' );
-    smarturlfield.setAttribute ( 'value', service );
-    smarturlfield.setAttribute ( 'name', 'service' );
-    webform.appendChild ( smarturlfield );
-  }
-  document.querySelector ( '.crmWebToEntityForm .formsubmit' ).setAttribute ( 'disabled', true );
- }
- function tooltipShow6988454000000684005 ( el ){
-  var tooltip = el.nextElementSibling;
-  var tooltipDisplay = tooltip.style.display;
-  if( tooltipDisplay == 'none' ){
-    var allTooltip = document.getElementsByClassName ( 'zcwf_tooltip_over' );
-    for( i = 0; i < allTooltip.length; i++ ){
-      allTooltip[ i ].style.display = 'none';
-    }
-    tooltip.style.display = 'block';
-  } else { tooltip.style.display = 'none'; }
- }
-</script>
-</form>
-</div>`
-                }}
-              />
-            </div>
+      function reCaptchaAlert6988454000000684005 (){
+        var recap = document.getElementById('recap6988454000000684005');
+        if(recap && recap.getAttribute('captcha-verified') == 'false'){
+          var err = document.getElementById('recapErr6988454000000684005');
+          if(err){ err.style.visibility = 'visible'; }
+          return false;
+        }
+        return true;
+      }
+      function validateEmail6988454000000684005 (){
+        var form = document.forms['WebToLeads6988454000000684005'];
+        var emailFld = form.querySelectorAll('[ftype=email]');
+        for(var i=0;i<emailFld.length;i++){
+          var emailVal = emailFld[i].value;
+          if((emailVal.replace(/^\\s+|\\s+$/g,'' )).length != 0){
+            var atpos = emailVal.indexOf('@');
+            var dotpos = emailVal.lastIndexOf('.');
+            if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length){
+              alert('Introduzca una dirección de correo electrónico válida. ');
+              emailFld[i].focus();
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+      function checkMandatory6988454000000684005 (){
+        var mndFileds = ['First Name','Last Name'];
+        var fldLangVal = ['Nombre','Apellido'];
+        for(var i=0;i<mndFileds.length;i++){
+          var fieldObj = document.forms['WebToLeads6988454000000684005'][mndFileds[i]];
+          if(fieldObj){
+            if(((fieldObj.value).replace(/^\\s+|\\s+$/g,'' )).length == 0){
+              if(fieldObj.type == 'file'){ alert('Seleccione un archivo para cargar.'); fieldObj.focus(); return false; }
+              alert(fldLangVal[i] + ' no puede estar vacío.'); fieldObj.focus(); return false;
+            }else if(fieldObj.nodeName == 'SELECT'){
+              if(fieldObj.options[fieldObj.selectedIndex].value == '-None-'){
+                alert(fldLangVal[i] + ' no puede ser nulo.'); fieldObj.focus(); return false;
+              }
+            }else if(fieldObj.type == 'checkbox'){
+              if(fieldObj.checked == false){ alert('Please accept ' + fldLangVal[i]); fieldObj.focus(); return false; }
+            }
+          }
+        }
+        if(!validateEmail6988454000000684005()){ return false; }
+        if(!reCaptchaAlert6988454000000684005()){ return false; }
 
-            <div className="rounded-3xl border border-neutral-200 p-6 bg-white">
-              <div className="text-sm text-neutral-600">Información</div>
-              <ul className="mt-4 space-y-2 text-sm text-neutral-700">
-                <li>📧 {ORG.email}</li>
-                <li>📞 {ORG.phone}</li>
-                <li>📍 {ORG.address}</li>
-              </ul>
-              <div className="mt-6 text-sm text-neutral-500">Horario: Lun–Vie 9:00 a 18:00 (GMT-3)</div>
+        // smarturl param (si aplica)
+        var urlparams = new URLSearchParams(window.location.search);
+        if(urlparams.has('service') && (urlparams.get('service') === 'smarturl')){
+          var webform = document.getElementById('webform6988454000000684005');
+          var smart = document.createElement('input');
+          smart.setAttribute('type','hidden'); smart.setAttribute('value','smarturl'); smart.setAttribute('name','service');
+          webform.appendChild(smart);
+        }
+
+        // deshabilita botón submit para evitar doble envío
+        var submitBtn = document.querySelector('.crmWebToEntityForm .formsubmit');
+        if(submitBtn){ submitBtn.setAttribute('disabled', true); }
+        return true;
+      }
+      // expone en window para el onSubmit inline si se necesitara
+      window.addAriaSelected6988454000000684005 = addAriaSelected6988454000000684005;
+      window.rccallback6988454000000684005 = rccallback6988454000000684005;
+      window.reCaptchaAlert6988454000000684005 = reCaptchaAlert6988454000000684005;
+      window.validateEmail6988454000000684005 = validateEmail6988454000000684005;
+      window.checkMandatory6988454000000684005 = checkMandatory6988454000000684005;
+    `}
+  </Script>
+
+  <div className="mx-auto max-w-7xl px-4 py-16">
+    <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Contacto</h2>
+    <p className="mt-2 text-neutral-700 max-w-prose">
+      Cuéntanos tu interés y te contactaremos en 24 horas hábiles.
+    </p>
+
+    <div className="mt-8 grid lg:grid-cols-3 gap-6">
+      {/* Columna izquierda: formulario Zoho con UI original */}
+      <div className="lg:col-span-2 rounded-3xl border border-neutral-200 p-6 bg-white">
+        <form
+          id="webform6988454000000684005"
+          name="WebToLeads6988454000000684005"
+          action="https://crm.zoho.com/crm/WebToLeadForm"
+          method="POST"
+          acceptCharset="UTF-8"
+          onSubmit={(e) => {
+            // llama a la validación de Zoho
+            // @ts-ignore
+            if (typeof window !== 'undefined' && window.checkMandatory6988454000000684005) {
+              // @ts-ignore
+              const ok = window.checkMandatory6988454000000684005();
+              if (!ok) { e.preventDefault(); }
+            }
+          }}
+          className="grid sm:grid-cols-2 gap-4"
+        >
+          {/* ====== Ocultos obligatorios de Zoho ====== */}
+          <input type="text" name="xnQsjsdp" defaultValue="a60a7215101091d07eeb025d550ce0c4e9369c64fbfb661942d9ef3a583c5453" style={{ display: 'none' }} />
+          <input type="hidden" name="zc_gad" id="zc_gad" defaultValue="" />
+          <input type="text" name="xmIwtLD" defaultValue="73d2d9e8cf72df188f36932f8d309c47f409a2af8c8f2ff14198ee3d3e26bfc5be9a67989dcda09602908a4218f09c38" style={{ display: 'none' }} />
+          <input type="text" name="actionType" defaultValue="TGVhZHM=" style={{ display: 'none' }} />
+          <input type="text" name="returnURL" defaultValue="https://www.hklaba.com/gracias" style={{ display: 'none' }} />
+
+          {/* ====== Campos visibles (UI original, 2 columnas) ====== */}
+          <div>
+            <label className="block text-sm text-neutral-600">Nombre <span className="text-red-600">*</span></label>
+            <input
+              id="First_Name"
+              name="First Name"
+              required
+              className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm text-neutral-600">Apellido <span className="text-red-600">*</span></label>
+            <input
+              id="Last_Name"
+              name="Last Name"
+              required
+              className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200"
+            />
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="block text-sm text-neutral-600">Email</label>
+            <input
+              id="Email"
+              name="Email"
+              // atributo especial de Zoho (para su validador)
+              // @ts-ignore
+              ftype="email"
+              autoComplete="off"
+              className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200"
+            />
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="block text-sm text-neutral-600">Mensaje</label>
+            <textarea
+              id="LEADCF3"
+              name="LEADCF3"
+              rows={5}
+              className="mt-1 w-full rounded-xl bg-white border border-neutral-300 px-3 py-2 outline-none focus:ring-2 focus:ring-red-200"
+            />
+          </div>
+
+          {/* Lead_Origen (oculto, valor por defecto seleccionado) */}
+          <select
+            id="LEADCF9"
+            name="LEADCF9"
+            defaultValue="hklaba.com/contacto"
+            onChange={() => {
+              // @ts-ignore
+              if (window.addAriaSelected6988454000000684005) window.addAriaSelected6988454000000684005();
+            }}
+            className="hidden"
+            aria-hidden="true"
+          >
+            <option value="-None-">-None-</option>
+            <option value="plan.dekaelomedia.com">plan.dekaelomedia.com</option>
+            <option value="tronxgroup.com/contacto">tronxgroup.com/contacto</option>
+            <option value="tronxstrategic.com/contacto">tronxstrategic.com/contacto</option>
+            <option value="dekaelomedia.com/contacto">dekaelomedia.com/contacto</option>
+            <option value="empresas.echevensko.com">empresas.echevensko.com</option>
+            <option value="apccskills.asiapacific-chamber.com">apccskills.asiapacific-chamber.com</option>
+            <option value="asiapacific-chamber.com/contacto">asiapacific-chamber.com/contacto</option>
+            <option value="hklaba.com/contacto">hklaba.com/contacto</option>
+          </select>
+
+          {/* honeypot oculto */}
+          <input type="text" name="aG9uZXlwb3Q" defaultValue="" style={{ display: 'none' }} />
+
+          {/* reCAPTCHA + botones */}
+          <div className="sm:col-span-2">
+            <div
+              id="recap6988454000000684005"
+              className="g-recaptcha"
+              data-sitekey="6LcAPtorAAAAAALHzNfPb8al-jYExQbDcCiK7BK5"
+              data-theme="light"
+              data-callback="rccallback6988454000000684005"
+              // atributo que usa el validador de Zoho
+              // @ts-ignore
+              captcha-verified="false"
+            />
+            <div id="recapErr6988454000000684005" className="mt-2 text-xs text-red-600" style={{ visibility: 'hidden' }}>
+              Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.
             </div>
           </div>
-        </div>
-      </section>
+
+          <div className="sm:col-span-2 flex items-center gap-3">
+            <button className="rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition formsubmit" type="submit">
+              Enviar
+            </button>
+            <button className="rounded-xl border border-neutral-300 text-neutral-700 px-5 py-3 font-medium hover:bg-neutral-50 transition" type="reset">
+              Restablecer
+            </button>
+          </div>
+        </form>
+      </div>
+
+      {/* Columna derecha: información de contacto (igual que tu diseño) */}
+      <div className="rounded-3xl border border-neutral-200 p-6 bg-white">
+        <div className="text-sm text-neutral-600">Información</div>
+        <ul className="mt-4 space-y-2 text-sm text-neutral-700">
+          <li>📧 info@hklaba.com</li>
+          <li>📞 +56 9 7576 9493</li>
+          <li>📍 Santiago - Chile</li>
+        </ul>
+        <div className="mt-6 text-sm text-neutral-500">Horario: Lun–Vie 9:00 a 18:00 (GMT-3)</div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="py-10">
