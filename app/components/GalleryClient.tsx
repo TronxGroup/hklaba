@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 
-const activities = ['/IMG_6093.jpg','/banco_peru_hklaba.jpeg','/IMG-20190110-WA0044.jpg']
+const activities = ['/apcc_hklaba.jpg','/banco_peru_hklaba.jpeg','/IMG-20190110-WA0044.jpg']
 
 export default function GalleryClient() {
   return (
