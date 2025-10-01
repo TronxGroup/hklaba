@@ -41,7 +41,7 @@ export default function HKLABALanding() {
     email: 'info@hklaba.com',
     phone: '+56 9 7576 9493',
     address: 'Santiago - Chile',
-    apccSignupUrl: 'https://apcc-chamber.vercel.app/',
+    apccSignupUrl: 'https://www.asiapacific-chamber.com/',
   }
 
   const federationStats = [
