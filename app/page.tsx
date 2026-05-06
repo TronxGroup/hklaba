@@ -77,6 +77,33 @@ export default function HKLABALanding() {
     'Beneficios y ofertas en países como Tailandia y Vietnam (alojamiento, restaurantes, otros)',
   ]
 
+  const quickLinks = [
+    {
+      href: '/nosotros',
+      icon: '🏛️',
+      title: 'Nosotros',
+      desc: 'Misión, historia, valores y alianzas institucionales de HKLABA.',
+    },
+    {
+      href: '/servicios',
+      icon: '⚙️',
+      title: 'Servicios',
+      desc: 'Consultoría, ferias HKTDC, networking, inteligencia de mercado e inversiones.',
+    },
+    {
+      href: '/noticias',
+      icon: '📰',
+      title: 'Noticias',
+      desc: 'Hong Kong Forum 2026, actualizaciones de la Federation y oportunidades de mercado.',
+    },
+    {
+      href: '/contacto',
+      icon: '✉️',
+      title: 'Contacto',
+      desc: 'Escríbenos por email o WhatsApp. Basados en Santiago, con alcance regional.',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white text-neutral-900">
       {/* JSON-LD básicos */}
@@ -112,14 +139,17 @@ export default function HKLABALanding() {
             </a>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-600" aria-label="Navegación principal">
-            <a href="#quienes" className="hover:text-hklRed">Quiénes somos</a>
-            <a href="#alianzas" className="hover:text-hklRed">Alianza HKTDC</a>
-            <a href="#porquehk" className="hover:text-hklRed">Por qué Hong Kong</a>
-            <a href="#membresias" className="hover:text-hklRed">Membresías</a>
-            <a href="#forum" className="hover:text-hklRed">Hong Kong Forum</a>
-            <a href="#galeria" className="hover:text-hklRed">Galería</a>
-            <a href="#contacto" className="hover:text-hklRed">Contacto</a>
-            <a href={ORG.apccSignupUrl} className="inline-flex rounded-xl border border-hklRed text-hklRed px-3 py-1.5 hover:bg-hklRed hover:text-white transition" rel="noopener">Unirme vía APCC</a>
+            <a href="/nosotros"  className="hover:text-hklRed">Nosotros</a>
+            <a href="/servicios" className="hover:text-hklRed">Servicios</a>
+            <a href="/noticias"  className="hover:text-hklRed">Noticias</a>
+            <a href="/contacto"  className="hover:text-hklRed">Contacto</a>
+            <a
+              href={ORG.apccSignupUrl}
+              className="inline-flex rounded-xl border border-hklRed text-hklRed px-3 py-1.5 hover:bg-hklRed hover:text-white transition"
+              rel="noopener"
+            >
+              Unirme vía APCC
+            </a>
           </nav>
         </div>
       </header>
@@ -159,7 +189,7 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* QUIÉNES SOMOS (video cliente simplificado con iframe) */}
+      {/* QUIÉNES SOMOS */}
       <section id="quienes" className="border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10">
           <div>
@@ -174,13 +204,15 @@ export default function HKLABALanding() {
               <li>• Inteligencia de mercado y programas de internacionalización</li>
               <li>• Participación prioritaria en foros, misiones y actividades de la Federation</li>
             </ul>
+            <a href="/nosotros" className="mt-6 inline-block text-sm text-hklRed font-medium underline decoration-red-200 hover:decoration-hklRed">
+              Conocer más sobre HKLABA →
+            </a>
           </div>
           <div className="rounded-3xl border border-neutral-200 p-6 bg-neutral-50 space-y-4">
             <div className="text-sm text-neutral-600">Relación con la Federation</div>
             <p className="text-neutral-700">
               La Federation reúne a 49 asociaciones en 38 países y regiones, con más de 11.000 asociados individuales. Su objetivo es crear sinergias y un canal de colaboración global en torno a Hong Kong.
             </p>
-            {/* Si prefieres tu componente cliente, deja AllianceVideoClient; si no, mantenemos el iframe */}
             <AllianceVideoClient videoId="a1OcIDBTHgw" title="Quiénes Somos – Video" />
           </div>
         </div>
@@ -194,7 +226,7 @@ export default function HKLABALanding() {
             <p className="mt-4 text-neutral-700">
               HKLABA y el Hong Kong Trade Development Council (HKTDC) mantienen un acuerdo de cooperación (MOU) para promover comercio e inversiones, intercambio de consultas, apoyo a misiones y actividades empresariales.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a href={ORG.apccSignupUrl} className="rounded-xl bg-hklRed text-white px-5 py-3 font-medium hover:bg-red-800 transition" rel="noopener">Quiero ser miembro</a>
               <a href="#forum" className="rounded-xl border border-hklRed text-hklRed px-5 py-3 font-medium hover:bg-red-50 transition">Conocer el Hong Kong Forum</a>
             </div>
@@ -241,15 +273,42 @@ export default function HKLABALanding() {
               <p className="mt-2">ICAC y cumplimiento robusto para un terreno parejo de negocios.</p>
             </div>
           </div>
+          <a href="/servicios" className="mt-8 inline-block text-sm text-hklRed font-medium underline decoration-red-200 hover:decoration-hklRed">
+            Ver todos los servicios y beneficios de membresía →
+          </a>
         </div>
       </section>
 
-      {/* Forum y Galería (tus componentes cliente) */}
+      {/* Forum y Galería (componentes cliente) */}
       <ForumClient />
       <GalleryClient />
 
-      {/* Alianzas */}
+      {/* ACCESO RÁPIDO A PÁGINAS */}
       <section className="border-b border-neutral-200 bg-neutral-50">
+        <div className="mx-auto max-w-7xl px-4 py-16">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Explora HKLABA</h2>
+          <p className="mt-2 text-neutral-600 max-w-prose">Todo lo que necesitas saber sobre nuestra asociación, en un solo lugar.</p>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {quickLinks.map((link, i) => (
+              <a
+                key={i}
+                href={link.href}
+                className="group rounded-2xl border border-neutral-200 bg-white p-6 hover:border-hklRed transition flex flex-col gap-3"
+              >
+                <span className="text-3xl">{link.icon}</span>
+                <div>
+                  <p className="font-semibold text-neutral-900 group-hover:text-hklRed transition">{link.title}</p>
+                  <p className="mt-1 text-sm text-neutral-500">{link.desc}</p>
+                </div>
+                <span className="mt-auto text-sm text-hklRed">Ver más →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Alianzas — logos */}
+      <section className="border-b border-neutral-200">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900">Alianzas</h2>
           <p className="mt-2 text-neutral-700 max-w-prose">Logos de aliados estratégicos y organizaciones colaboradoras.</p>
@@ -263,7 +322,7 @@ export default function HKLABALanding() {
         </div>
       </section>
 
-      {/* Contacto (tu componente Zoho cliente) */}
+      {/* Contacto Zoho */}
       <ContactZohoClient />
 
       {/* FOOTER */}
