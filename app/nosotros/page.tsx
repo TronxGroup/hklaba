@@ -35,12 +35,12 @@ const MILESTONES = [
     desc: 'HKLABA firma un Memorándum de Entendimiento con el Hong Kong Trade Development Council para promover comercio, inversiones y misiones empresariales entre Hong Kong y América Latina.',
   },
   {
-    year: '2019',
+    year: '2017',
     title: 'Ingreso a la Federation',
     desc: 'HKLABA se convierte en la única asociación de América Latina miembro pleno de la Federation of Hong Kong Business Associations Worldwide.',
   },
   {
-    year: '2023',
+    year: '2019',
     title: 'Alianza con APCC',
     desc: 'Se establece la vía de membresía a través de la Asia-Pacific Chamber of Commerce (APCC), ampliando el acceso a la red para empresarios latinoamericanos.',
   },
