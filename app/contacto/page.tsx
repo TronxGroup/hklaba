@@ -259,15 +259,10 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-7xl px-4 text-sm text-neutral-500 space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <Image
-                src="/federation-logo.png"
-                alt="Miembro de la Federation of Hong Kong Business Associations Worldwide"
-                width={200}
-                height={48}
-              />
+              <Image src="/federation-logo.png" alt="Miembro de la Federation of Hong Kong Business Associations Worldwide" width={200} height={48} />
               <span className="text-neutral-600">Miembro oficial de la Federation of Hong Kong Business Associations Worldwide</span>
             </div>
-            <div>© {new Date().getFullYear()} HKLABA. Todos los derechos reservados.</div>
+            <div className="flex flex-col sm:flex-row gap-1 sm:gap-3">© {new Date().getFullYear()} HKLABA. Todos los derechos reservados.<span className="hidden sm:inline text-neutral-300">·</span><a href="https://www.tronxweb.cl/" target="_blank" rel="noopener noreferrer" className="hover:text-hklRed transition">Desarrollado por Tronx Web</a></div>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-neutral-600">
             <a href="https://www.linkedin.com/company/hklaba" target="_blank" rel="noreferrer noopener" className="underline decoration-neutral-300 hover:text-hklRed">LinkedIn</a>
@@ -280,3 +275,4 @@ export default function ContactoPage() {
     </div>
   )
 }
+
