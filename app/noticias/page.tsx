@@ -94,7 +94,7 @@ const ARTICLES: Article[] = [
     tag: 'Ferias',
     tagColor: 'bg-amber-50 text-amber-700',
     date: '2025',
-    title: 'Acceso gratuito a las ferias HKTDC: un beneficio exclusivo para miembros',
+    title: 'Accesoo gratuito a las ferias HKTDC: un beneficio exclusivo para miembros',
     excerpt:
       'Como miembro de HKLABA y asociado de la Federation, tienes entrada sin costo a las principales ferias internacionales que el HKTDC organiza en Hong Kong cada año.',
     body: [
