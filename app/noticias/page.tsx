@@ -37,21 +37,21 @@ type Article = {
 // ── Datos ───────────────────────────────────────────────────────────────────
 const ARTICLES: Article[] = [
   {
-    slug: 'hong-kong-forum-2025',
+    slug: 'hong-kong-forum-2026',
     tag: 'Evento destacado',
     tagColor: 'bg-red-50 text-hklRed',
-    date: '2 – 3 de diciembre de 2025',
-    title: '26° Hong Kong Forum 2025 — El evento anual de la Federation llega a Hong Kong',
+    date: '17 – 18 de noviembre de 2026',
+    title: 'Hong Kong Forum 2026 — El evento anual de la Federation regresa al HKCEC',
     excerpt:
-      'El Hong Kong Convention and Exhibition Centre será sede de la 26° edición del Hong Kong Forum, el evento insignia de la Federation of Hong Kong Business Associations Worldwide, organizado por el HKTDC.',
+      'El Hong Kong Convention and Exhibition Centre será nuevamente sede del Hong Kong Forum, el evento insignia de la Federation of Hong Kong Business Associations Worldwide, organizado por el HKTDC y el Gobierno de la RAEHK.',
     body: [
-      'El Hong Kong Forum es el evento anual más importante de la Federation of Hong Kong Business Associations Worldwide. Cada año, alrededor de 400 asociados de todo el mundo se reúnen en Hong Kong para acceder a los análisis más actualizados sobre cómo hacer negocios en Hong Kong y China continental.',
-      'La 26° edición se celebrará los días 2 y 3 de diciembre de 2025 en el Hong Kong Convention and Exhibition Centre (HKCEC), en Wan Chai, Hong Kong. El evento es organizado conjuntamente por el HKTDC y la Federation.',
-      'El programa incluye sesiones plenarias, paneles de discusión, networking cara a cara y un almuerzo de recepción exclusivo para miembros de la Federation. Adicionalmente, se organiza un programa opcional de visita a China continental para los participantes.',
+      'El Hong Kong Forum es el evento anual más importante de la Federation of Hong Kong Business Associations Worldwide — una red única de 49 asociaciones de Hong Kong en 38 países y regiones, con cerca de 11.000 ejecutivos y profesionales de negocios como asociados individuales.',
+      'Cada año, los miembros de la Federation se reúnen en Hong Kong durante dos días para acceder a los análisis más actualizados sobre cómo hacer negocios en Hong Kong y China continental. El programa incluye discursos principales, paneles de discusión, sesiones de networking y oportunidades de interacción cara a cara con altos ejecutivos de Hong Kong y todo el mundo.',
+      'Adicionalmente, los asociados tienen la oportunidad de participar en un programa de visitas para conocer los últimos desarrollos en infraestructura y el panorama empresarial de la ciudad.',
       'Como miembro de HKLABA, formas parte de la Federation y puedes participar en este evento de alto nivel. La delegación latinoamericana es coordinada directamente por HKLABA.',
     ],
     link: {
-      label: 'Ver programa y registro oficial',
+      label: 'Ver información oficial del Forum',
       url: 'https://hkforum.hktdc.com/conference/hkforum/en',
     },
     featured: true,
@@ -94,7 +94,7 @@ const ARTICLES: Article[] = [
     tag: 'Ferias',
     tagColor: 'bg-amber-50 text-amber-700',
     date: '2025',
-    title: 'Accesoo gratuito a las ferias HKTDC: un beneficio exclusivo para miembros',
+    title: 'Acceso gratuito a las ferias HKTDC: un beneficio exclusivo para miembros',
     excerpt:
       'Como miembro de HKLABA y asociado de la Federation, tienes entrada sin costo a las principales ferias internacionales que el HKTDC organiza en Hong Kong cada año.',
     body: [
@@ -277,23 +277,23 @@ export default function NoticiasPage() {
                   <dl className="space-y-4">
                     <div>
                       <dt className="text-xs text-neutral-500">Edición</dt>
-                      <dd className="font-semibold text-neutral-900">26° Hong Kong Forum</dd>
+                      <dd className="font-semibold text-neutral-900">Hong Kong Forum 2026</dd>
                     </div>
                     <div>
                       <dt className="text-xs text-neutral-500">Fecha</dt>
-                      <dd className="font-semibold text-neutral-900">2 – 3 de diciembre, 2025</dd>
+                      <dd className="font-semibold text-neutral-900">17 – 18 de noviembre, 2026</dd>
                     </div>
                     <div>
                       <dt className="text-xs text-neutral-500">Sede</dt>
-                      <dd className="font-semibold text-neutral-900">Hong Kong Convention and Exhibition Centre, Wan Chai</dd>
+                      <dd className="font-semibold text-neutral-900">Hong Kong Convention and Exhibition Centre (HKCEC)</dd>
                     </div>
                     <div>
                       <dt className="text-xs text-neutral-500">Organizadores</dt>
-                      <dd className="font-semibold text-neutral-900">HKTDC & Federation of Hong Kong Business Associations Worldwide</dd>
+                      <dd className="font-semibold text-neutral-900">HKTDC & Gobierno de la Región Administrativa Especial de Hong Kong</dd>
                     </div>
                     <div>
-                      <dt className="text-xs text-neutral-500">Asistentes esperados</dt>
-                      <dd className="font-semibold text-neutral-900">~400 asociados de todo el mundo</dd>
+                      <dt className="text-xs text-neutral-500">Red de la Federation</dt>
+                      <dd className="font-semibold text-neutral-900">49 asociaciones en 38 países y regiones</dd>
                     </div>
                   </dl>
                 </div>
